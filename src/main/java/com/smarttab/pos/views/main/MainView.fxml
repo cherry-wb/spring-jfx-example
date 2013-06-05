@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import java.lang.String?>
+<BorderPane fx:id="view"
+            fx:controller="com.smarttab.pos.views.main.MainViewController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <styleClass>
+        <String fx:value="welcome"/>
+    </styleClass>
+
+    <top>
+        <HBox spacing="4">
+            <children>
+                <Button text="Show Page 1" onAction="#showPage1"/>
+                <Button text="Show Page 2" onAction="#showPage2"/>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <BorderPane fx:id="contentArea"/>
+    </center>
+
+</BorderPane>
