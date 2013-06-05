@@ -21,16 +21,19 @@ public class MainConfiguration {
     private static final Logger LOGGER = LoggerFactory.getLogger(MainConfiguration.class);
 
     @Bean
+    @Scope("prototype")
     public MainViewController mainController() throws IOException {
         return loadController(MainViewController.class);
     }
 
     @Bean
+    @Scope("prototype")
     public Page1ViewController page1Controller() throws IOException {
         return loadController(Page1ViewController.class);
     }
 
     @Bean
+    @Scope("prototype")
     public Page2ViewController page2Controller() throws IOException {
         return loadController(Page2ViewController.class);
     }
