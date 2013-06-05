@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,7 +40,7 @@ public class MainConfiguration {
     }
 
     @SuppressWarnings("unchecked")
-    private static  <T> T loadController(Class<T> clazz) throws IOException {
+    private static <T> T loadController(Class<T> clazz) throws IOException {
         final String viewName = clazz.getSimpleName().split("Controller")[0];
         LOGGER.debug("loading controller: " + viewName);
         final URL resource = clazz.getResource(viewName + ".fxml");

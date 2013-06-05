@@ -14,6 +14,7 @@ public class MainViewController extends AbstractViewController {
 
     @Autowired
     private Page1ViewController page1Controller;
+
     @Autowired
     private Page2ViewController page2Controller;
 
